@@ -1,0 +1,17 @@
+// Styles.scss
+@import 'susy/sass/susy';
+
+.test {
+  background: linear-gradient(to bottom, #fff, #053);
+  font-size: 100px;
+  color: #0f1c0f;
+  width: percentage(5 / 3);
+  display: flex;
+  transition: all 0.5s;
+  user-select: none;
+}
+
+// styles.scss
+.susy-test {
+  @include span(5);
+}

@@ -1,0 +1,22 @@
+@import 'testing';
+@import 'sprites';
+
+// Styles.scss
+@import 'susy/sass/susy';
+
+.github {
+    //1-OpÔö£┬║Ôö£├║o sem retina
+    //@include sprite($github);
+    //$spritesheet-sprites is a map for all sprites.
+  @include sprites($spritesheet-sprites);
+
+    //2-OpÔö£┬║Ôö£├║o de Retina
+    ////aqui abaixo com group preenche media query para retina
+    //@include retina-sprite($github-group);
+    //@include retina-sprites($retina-groups);
+}
+
+// styles.scss
+.susy-test {
+  @include span(5);
+}
