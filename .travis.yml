@@ -5,6 +5,9 @@ install:
   - "npm install bower -g"
   - "bower install"
 
+# build platform, i.e. x86, x64, Any CPU. This setting is optional.
+platform: Any CPU
+
 
 node_js:
   - "4.2"
