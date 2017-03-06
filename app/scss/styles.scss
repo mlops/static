@@ -1,17 +1,33 @@
-// Styles.scss
 @import 'susy/sass/susy';
+@import 'testing';
 
-.test {
-  background: linear-gradient(to bottom, #fff, #053);
-  font-size: 100px;
-  color: #0f1c0f;
-  width: percentage(5 / 3);
+.testing {
   display: flex;
-  transition: all 0.5s;
-  user-select: none;
+  width: percentage(5 / 7);
 }
 
-// styles.scss
 .susy-test {
-  @include span(5);
+  @include span(2);
 }
+
+.is-active {
+  color: red;
+}
+
+.has-border {
+  border: 2px solid black;
+}
+
+
+/* uncss:ignore */
+.ignored-selector {
+color: red;
+}
+/* Aqui não parece no arquivo gerado ou add no useref:ignore do gulpFile */
+.removed-selector {
+color: blue;
+}
+
+// body {
+// 	background-color: gray;
+// }

@@ -1,0 +1,45 @@
+configuration: Release
+
+branches:
+  only:
+    - master
+
+before_build:
+ #- nuget restore
+
+# package Web Application project for web Deploy
+build:
+  verbosity: minimal
+  publish_wap: true
+
+
+# Test against the latest version of this Node.js version
+environment:
+  matrix:
+    - nodejs_version: "4"
+    - nodejs_version: "6"
+
+platform:
+  - x86
+  - x64
+
+install:
+  - ps: Install-Product node $env:nodejs_version $env:platform
+  - npm -g install npm@latest
+  - set PATH=%APPDATA%\npm;%PATH%
+  - ps: Install-Product node $env:nodejs_version
+  - npm install
+  - npm install bower -g
+  - bower install
+  
+test_script:
+  - node --version
+  - npm --version
+  - npm test
+  - gulp test
+
+# Don't actually build.
+# build: off
+
+# Set build version format here instead of in the admin panel.
+version: "{build}"
