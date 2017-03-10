@@ -2,10 +2,10 @@ language: node_js
 node_js:
   - "6"
 env:
-  - CXX=g++-6.9.4
+  - CXX=g++-6.9
 addons:
   apt:
     sources:
       - ubuntu-toolchain-r-test
     packages:
-      - g++-6.9.4
+      - g++-6.9
