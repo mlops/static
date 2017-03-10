@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "ayw",
   "main": "gulpfile.js",
-  "private": true,
   "scripts": {
     "test": "echo \"teste\""
   },
