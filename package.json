@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "ayw",
   "main": "gulpfile.js",
-  "scripts": {
-    "test": "echo \"teste\""
-  },
   "author": "andre",
   "license": "ISC",
+  "scripts": {
+"test": "gulp test"
+},
   "devDependencies": {
     "browser-sync": "^2.18.6",
     "del": "^2.2.2",
