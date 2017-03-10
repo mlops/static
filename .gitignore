@@ -1,4 +1,4 @@
-# Gitignore file
+Gitignore file
 .DS_Store
 Thumbs.db
 profile
@@ -13,6 +13,3 @@ bower_components
 *.html
 *.css
 dist
-
-test
-tests
