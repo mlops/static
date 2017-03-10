@@ -13,6 +13,7 @@ var nunjucksRender = require('gulp-nunjucks-render');
 var data = require('gulp-data');
 var del = require('del');
 var fs = require('fs');
+var util = require('gulp-util');
 var runSequence = require('run-sequence');
 
 //JS testing
