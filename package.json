@@ -44,7 +44,7 @@
     "jasmine-core": "^2.5.2",
     "jshint": "^2.9.4",
     "karma": "1.x || ^0.13.0",
-    "karma-jasmine": "^1.1.0",
+    "karma-jasmine": "1.x || ^0.3.6",
     "run-sequence": "^1.2.2"
   }
 }
