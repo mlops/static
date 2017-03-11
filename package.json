@@ -43,8 +43,8 @@
     "gulp.spritesmith": "^6.3.0",
     "jasmine-core": "^2.5.2",
     "jshint": "^2.9.4",
-    "karma": "1.x || ^0.13.0",
-    "karma-jasmine": "1.x || ^0.3.6",
+    "karma": "1.x",
+    "karma-jasmine": "1.x",
     "run-sequence": "^1.2.2"
   }
 }
