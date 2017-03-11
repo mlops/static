@@ -40,11 +40,11 @@
     "gulp.spritesmith": "^6.3.0",
     "jasmine-core": "^2.5.2",
     "jshint": "^2.9.4",
-    "karma": "~0.8",
+    "karma": "1.x",
     "karma-jasmine": "1.x",
     "run-sequence": "^1.2.2"
   },
-  "scripts": {
+    "scripts": {
    "test": "./node_modules/.bin/karma start --browsers Firefox --single-run"
-    }
+}
 }
