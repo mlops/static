@@ -45,6 +45,7 @@
     "jshint": "^2.9.4",
     "karma": "1.x",
     "karma-jasmine": "1.x",
+    "karma-firefox-launcher": "^1.0.0",
     "run-sequence": "^1.2.2"
   }
 }
