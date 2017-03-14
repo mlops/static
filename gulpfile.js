@@ -13,7 +13,7 @@ var nunjucksRender = require('gulp-nunjucks-render');
 var data = require('gulp-data');
 var del = require('del');
 var fs = require('fs');
-var util = require('gulp-util');
+var gutil = require('gulp-util');
 var runSequence = require('run-sequence');
 
 //JS testing
@@ -57,19 +57,35 @@ gulp.task('hello', function() {
 
 // // Custom Plumber function for catching errors
 
+// function customPlumber(errTitle) {
+// 	return plumber({
+// 		errorHandler: notify.onError({
+// 			// Customizing error title
+// 			title: errTitle || "Error running Gulp",
+// 			message: "Error: <%= error.message %>",
+// 			sound: "Glass"
+// 		})
+// 	});
+// }
+
+// Custom Plumber function for catching errors
 function customPlumber(errTitle) {
-	return plumber({
-		errorHandler: notify.onError({
-			// Customizing error title
-			title: errTitle || "Error running Gulp",
-			message: "Error: <%= error.message %>",
-			sound: "Glass"
-		})
-	});
-}
-
-
-
+	if (process.env.CI) {
+		return plumber({
+			errorHandler: function(err) {
+				// Changes first line of error into red
+				throw Error(gutil.colors.red(err.message));
+			}
+		});
+	} else {
+		return plumber({
+			errorHandler: notify.onError({
+				// Customizing error title
+				title: errTitle || 'Error running Gulp',
+				message: 'Error: <%= error.message %>',
+			})
+		});
+	}
 
 // Clean
 gulp.task('clean:dev', function() {
