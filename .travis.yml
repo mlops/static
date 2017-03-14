@@ -8,10 +8,10 @@ before_script:
 
 
 before_install:
-  - gem update --system 2.3.3p222
+  - gem update --system 2.3.3
   - gem --version
 
-  
+
 # Other settings
 script:
 - "gulp dev-ci"
