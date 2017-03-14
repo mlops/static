@@ -2,9 +2,6 @@ language: node_js
 node_js:
   - 6.9.4
 
-env: 
-- CI=true
-
 before_script:
 - "export DISPLAY=:99.0"
 - "sh -e /etc/init.d/xvfb start"
@@ -26,6 +23,4 @@ install:
 - "npm install bower -g"
 - "bower install"
 # Install scss_lint gem
-- "gem install scss-lint"
-
-
+- "gem update --system && gem install scss-lint"
