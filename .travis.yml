@@ -8,7 +8,8 @@ before_script:
 
 # Other settings
 script:
-- gulp test
+- "gulp"
+- "gulp test"
 
 install:
 - "npm install"
