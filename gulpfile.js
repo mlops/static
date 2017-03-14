@@ -235,7 +235,7 @@ gulp.task('test', function(done) {
     configFile: process.cwd() + '/karma.conf.js',
     singleRun: true
   }, done).start();
-});
+})
 
 
 
