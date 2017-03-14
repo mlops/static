@@ -8,7 +8,7 @@ before_script:
 
 
 before_install:
-  - gem update --system 2.3
+  - gem update --system 2.3.3p222
   - gem --version
 
   
@@ -22,4 +22,4 @@ install:
 - "npm install bower -g"
 - "bower install"
 # Install scss_lint gem
-- "gem install scss_lint"
+- "gem update --system && gem install scss-lint"
