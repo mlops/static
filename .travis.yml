@@ -9,3 +9,8 @@ before_script:
 # Other settings
 script:
 - gulp test
+
+install:
+- "npm install"
+- "npm install bower -g"
+- "bower install"
