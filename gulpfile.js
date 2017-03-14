@@ -249,7 +249,7 @@ gulp.task('dev-ci', function(callback) {
     'clean:dev', ['sprites', 'lint:js', 'lint:scss'], ['sass', 'nunjucks'],
     callback
   );
-});
+})
 
 
 // ==================
