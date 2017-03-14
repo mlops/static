@@ -244,13 +244,18 @@ gulp.task('test', function(done) {
 // =================
 // creating a new task that is exactly the same as
 // default , except that it doesn’t contain the browserSync or watch tasks.
-gulp.task('dev-ci', function(callback) {
-  runSequence(
-    'clean:dev', ['sprites', 'lint:js', 'lint:scss'], ['sass', 'nunjucks'],
-    callback
-  );
-})
-
+// gulp.task('dev-ci', function(callback) {
+//   runSequence(
+//     'clean:dev', ['sprites', 'lint:js', 'lint:scss'], ['sass', 'nunjucks'],
+//     callback
+//   );
+// })
+	gulp.task('dev-ci', function(callback) {
+		runSequence(
+			'clean:dev', ['sprites', 'lint:js', 'lint:scss'], ['sass', 'nunjucks'],
+			callback
+		);
+	})
 
 // ==================
 // OPTIMIZATION PHASE

@@ -10,16 +10,9 @@ before_script:
 - "export DISPLAY=:99.0"
 - "sh -e /etc/init.d/xvfb start"
 
-
 before_install:
   - gem update --system 2.3
   - gem --version
-
-
-# Other settings
-script:
-- "gulp dev-ci"
-- "gulp test"
 
 install:
 - "npm cache clean"
@@ -28,3 +21,8 @@ install:
 - "bower install"
 # Install scss_lint gem
 - "gem update --system && gem install scss-lint"
+
+# Other settings
+script:
+- "gulp dev-ci"
+- "gulp test"
